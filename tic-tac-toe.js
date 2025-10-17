@@ -20,5 +20,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
             }
         });
+
+        square.addEventListener('mouseover', function() {
+            if (gameState[index] === '') {
+                this.classList.add('hover');
+            }
+        });
+
+        square.addEventListener('mouseout', function() {
+            this.classList.remove('hover');
+        });
     });
 });
